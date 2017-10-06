@@ -12,7 +12,7 @@ setup(name='weather-api',
       keywords=['weather', 'api'],
       author_email='ant0@protonmail.ch',
       license='MIT',
-      packages=['weather', 'weather.models'],
+      packages=['weather', 'weather.objects'],
       install_requires=[
           'requests',
       ],

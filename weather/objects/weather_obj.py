@@ -1,3 +1,6 @@
+from forecast_obj import Forecast
+
+
 class WeatherObject(object):
     def __init__(self, weather_data):
         self._weather_data = weather_data
@@ -27,7 +30,9 @@ class WeatherObject(object):
         return self._weather_data['item']['condition']
 
     def forecast(self):
-        return self._weather_data['item']['forecast']
+        forecasts = []
+        [forecasts.append(Forecast(res)) for res in self._weather_data['item']['forecast']]
+        return forecasts
 
     def latitude(self):
         return self._weather_data['item']['lat']

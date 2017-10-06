@@ -1,5 +1,5 @@
 import requests
-from models.weather_obj import WeatherObject
+from objects.weather_obj import WeatherObject
 
 
 class Weather(object):

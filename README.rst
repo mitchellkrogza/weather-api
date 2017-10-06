@@ -36,11 +36,12 @@ Examples
     print condition['text']
     
     # Get weather forecasts for the upcoming days.
-    
-    for forecasts in location.forecast():
-        print forecasts['text']
-        print forecasts['date']
-        print forecasts['high']
-        print forecasts['low']
+
+    forecasts = location.forecast()
+    for forecast in forecasts:
+        print forecasts.text()
+        print forecasts.date()
+        print forecasts.high()
+        print forecasts.low()
 
 .. _API documentation: https://developer.yahoo.com/weather/
