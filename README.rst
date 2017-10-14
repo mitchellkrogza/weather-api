@@ -1,6 +1,8 @@
 weather-api
 ===========
 
+|Build Status|
+
 A Python wrapper for the Yahoo Weather API.
 
 With the API, you can get up-to-date weather information for any location, including 5-day forecast, wind, atmosphere, astronomy conditions, and more. You can lookup weather by woeid, city name or lat/long.
@@ -45,3 +47,6 @@ Examples
         print(forecasts.low())
 
 .. _API documentation: https://developer.yahoo.com/weather/
+
+.. |Build Status| image:: https://travis-ci.org/AnthonyBloomer/weather-api.svg?branch=master
+   :target: https://travis-ci.org/AnthonyBloomer/weather-api
