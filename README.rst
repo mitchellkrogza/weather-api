@@ -27,21 +27,21 @@ Examples
 
     lookup = weather.lookup(560743)
     condition = lookup.condition()
-    print condition['text']
+    print(condition['text'])
 
     # Lookup via location name.
 
     location = weather.lookup_by_location('dublin')
     condition = location.condition()
-    print condition['text']
+    print(condition['text'])
     
     # Get weather forecasts for the upcoming days.
 
     forecasts = location.forecast()
     for forecast in forecasts:
-        print forecasts.text()
-        print forecasts.date()
-        print forecasts.high()
-        print forecasts.low()
+        print(forecasts.text())
+        print(forecasts.date())
+        print(forecasts.high())
+        print(forecasts.low())
 
 .. _API documentation: https://developer.yahoo.com/weather/

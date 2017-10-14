@@ -1,5 +1,6 @@
 import requests
-from objects.weather_obj import WeatherObject
+import pprint
+from .objects.weather_obj import WeatherObject
 
 
 class Weather(object):
@@ -22,4 +23,4 @@ class Weather(object):
             wo = WeatherObject(results['query']['results']['channel'])
             return wo
         else:
-            print 'No results found.'
+            pprint.pprint(results)

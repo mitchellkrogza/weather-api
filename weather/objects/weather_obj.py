@@ -1,4 +1,4 @@
-from forecast_obj import Forecast
+from .forecast_obj import Forecast
 
 
 class WeatherObject(object):

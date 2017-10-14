@@ -17,9 +17,9 @@ class WeatherTests(unittest.TestCase):
         w = Weather()
         location = w.lookup_by_location('Dublin')
         forecasts = location.forecast()
-        assert len(forecasts) > 0
-        for forecasts in location.forecast():
-            print(forecasts.text())
-            print(forecasts.date())
-            print(forecasts.high())
-            print(forecasts.low())
+        self.assertTrue(len(forecasts) > 0)
+        first = forecasts[0]
+        self.assertTrue(hasattr(first, 'text'))
+        self.assertTrue(hasattr(first, 'high'))
+        self.assertTrue(hasattr(first, 'low'))
+        self.assertTrue(hasattr(first, 'date'))
