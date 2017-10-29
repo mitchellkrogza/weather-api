@@ -41,10 +41,10 @@ Examples
 
     forecasts = location.forecast()
     for forecast in forecasts:
-        print(forecasts.text())
-        print(forecasts.date())
-        print(forecasts.high())
-        print(forecasts.low())
+        print(forecast.text())
+        print(forecast.date())
+        print(forecast.high())
+        print(forecast.low())
 
 .. _API documentation: https://developer.yahoo.com/weather/
 
