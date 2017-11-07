@@ -1,4 +1,5 @@
 from .forecast_obj import Forecast
+from .condition_obj import Condition
 
 
 class WeatherObject(object):
@@ -27,7 +28,7 @@ class WeatherObject(object):
         return self._weather_data['image']
 
     def condition(self):
-        return self._weather_data['item']['condition']
+        return Condition(self._weather_data['item']['condition'])
 
     def forecast(self):
         forecasts = []
