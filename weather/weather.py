@@ -17,8 +17,15 @@ class Weather(object):
         results = self._call(url)
         return results
 
-    def _call(self, url):
-        results = requests.get(url).json()
+    @staticmethod
+    def _call(url):
+        req = requests.get(url)
+
+        if not req.ok:
+            req.raise_for_status()
+
+        results = req.json()
+
         if int(results['query']['count']) > 0:
             wo = WeatherObject(results['query']['results']['channel'])
             return wo

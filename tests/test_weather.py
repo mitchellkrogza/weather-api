@@ -1,4 +1,5 @@
 import unittest
+from requests.exceptions import HTTPError
 from weather import Weather
 
 
@@ -36,3 +37,22 @@ class WeatherTests(unittest.TestCase):
         self.assertTrue(hasattr(condition, 'temp'))
         self.assertTrue(hasattr(condition, 'code'))
         self.assertTrue(hasattr(condition, 'date'))
+
+    def test_invalid_lookup_value(self):
+        w = Weather()
+        data = w.lookup(woeid=1)
+        try:
+            print data.location()
+        except AttributeError:
+            self.assertTrue(True)
+        except Exception as e:
+            self.fail("Unexpected exception raised: " + e.message)
+
+    def test_bad_request(self):
+        w = Weather()
+        try:
+            w.lookup(woeid="")
+        except HTTPError:
+            self.assertTrue(True)
+        except Exception as e:
+            self.fail("Unexpected exception raised: " + e.message)
