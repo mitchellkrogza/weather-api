@@ -42,7 +42,7 @@ class WeatherTests(unittest.TestCase):
         w = Weather()
         data = w.lookup(woeid=1)
         try:
-            print data.location()
+            print(data.location())
         except AttributeError:
             self.assertTrue(True)
         except Exception as e:
