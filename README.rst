@@ -1,7 +1,7 @@
 weather-api
 ===========
 
-|Build Status|
+|Build Status| |codecov|
 
 A Python wrapper for the Yahoo Weather API.
 
@@ -50,3 +50,5 @@ Examples
 
 .. |Build Status| image:: https://travis-ci.org/AnthonyBloomer/weather-api.svg?branch=master
    :target: https://travis-ci.org/AnthonyBloomer/weather-api
+.. |codecov| image:: https://codecov.io/gh/AnthonyBloomer/weather-api/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/AnthonyBloomer/weather-api
