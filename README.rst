@@ -50,7 +50,7 @@ Examples
 CLI Usage
 ---------
 
-.. code:: bash
+.. code::
 
 	usage: weather [-h] location
 
