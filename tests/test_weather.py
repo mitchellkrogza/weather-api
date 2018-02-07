@@ -1,23 +1,23 @@
 import unittest
 from requests.exceptions import HTTPError
-from weather import Weather
+from weather import Weather, Unit
 
 
 class WeatherTests(unittest.TestCase):
     def test_lookup(self):
-        w = Weather()
+        w = Weather(Unit.CELSIUS)
         data = w.lookup(woeid=560743)
         self.assertIsNotNone(data.print_obj())
         self.assertTrue('Dublin' in data.description())
 
     def test_search(self):
-        w = Weather()
+        w = Weather(Unit.CELSIUS)
         data = w.lookup_by_location('Dublin')
         self.assertIsNotNone(data.print_obj())
         self.assertTrue('Dublin' in data.description())
 
     def test_forecast(self):
-        w = Weather()
+        w = Weather(Unit.CELSIUS)
         location = w.lookup_by_location('Dublin')
         self.assertIsNotNone(location.print_obj())
         forecasts = location.forecast()
@@ -29,7 +29,7 @@ class WeatherTests(unittest.TestCase):
         self.assertTrue(hasattr(first, 'date'))
 
     def test_condition(self):
-        w = Weather()
+        w = Weather(Unit.CELSIUS)
         location = w.lookup_by_location('Dublin')
         self.assertIsNotNone(location.print_obj())
         condition = location.condition()
@@ -39,7 +39,7 @@ class WeatherTests(unittest.TestCase):
         self.assertTrue(hasattr(condition, 'date'))
 
     def test_invalid_lookup_value(self):
-        w = Weather()
+        w = Weather(Unit.CELSIUS)
         data = w.lookup(woeid=1)
         try:
             print(data.location())
@@ -49,7 +49,7 @@ class WeatherTests(unittest.TestCase):
             self.fail("Unexpected exception raised: " + e.message)
 
     def test_bad_request(self):
-        w = Weather()
+        w = Weather(Unit.CELSIUS)
         try:
             w.lookup(woeid="")
         except HTTPError:

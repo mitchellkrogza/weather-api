@@ -1,11 +1,12 @@
 import requests
 import pprint
 from .objects.weather_obj import WeatherObject
+from .unit import Unit
 
 class Weather(object):
     URL = 'http://query.yahooapis.com/v1/public/yql'
     
-    def __init__(self, unit='c'):
+    def __init__(self, unit=Unit.CELSIUS):
         self.unit = unit
 
     def lookup(self, woeid):

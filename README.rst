@@ -22,8 +22,8 @@ Examples
 .. code:: python
 
 
-    from weather import Weather
-    weather = Weather(unit='c')
+    from weather import Weather, Unit
+    weather = Weather(unit=Unit.CELSIUS)
 
     # Lookup WOEID via http://weather.yahoo.com.
 
