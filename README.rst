@@ -52,7 +52,7 @@ CLI Usage
 
 .. code:: bash
 
-	usage: __main__.py [-h] location
+	usage: weather [-h] location
 
 	positional arguments:
 	  location    The location to lookup.
