@@ -4,15 +4,15 @@ from .weather import Weather
 def main():
     pa = ArgumentParser()
     pa.add_argument('location', help='The location to lookup.')
+    pa.add_argument('--unit', default='c', nargs='?')
+    
     args = pa.parse_args()
-    weather = Weather()
+    weather = Weather(args.unit)
     loc = weather.lookup_by_location(args.location)
     condition = loc.condition()
     print("Weather report for %s" % loc.location()['city'])
     print("Condition: %s " % condition.text())
     print("Temperature: %s" % condition.temp())
-        
-
 
 if __name__ == '__main__':
     try:
