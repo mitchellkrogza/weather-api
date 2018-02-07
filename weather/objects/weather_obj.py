@@ -1,5 +1,6 @@
 from .forecast_obj import Forecast
 from .condition_obj import Condition
+from .location_obj import Location
 
 
 class WeatherObject(object):
@@ -42,7 +43,7 @@ class WeatherObject(object):
         return self._weather_data['item']['lng']
 
     def location(self):
-        return self._weather_data['location']
+        return Location(self._weather_data['location'])
 
     def units(self):
         return self._weather_data['units']
