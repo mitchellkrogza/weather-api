@@ -52,16 +52,15 @@ CLI Usage
 
 .. code::
 
-	usage: weather [-h] location
+	usage: weather [-h] [--unit [UNIT]] location
 
 	positional arguments:
-	  location    The location to lookup.
+	  location       The location to lookup.
 
 	optional arguments:
-	  -h, --help  show this help message and exit
+	  -h, --help     show this help message and exit
+	  --unit [UNIT]
 	
-
-
 .. _API documentation: https://developer.yahoo.com/weather/
 
 .. |Build Status| image:: https://travis-ci.org/AnthonyBloomer/weather-api.svg?branch=master
