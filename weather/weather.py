@@ -2,18 +2,20 @@ import requests
 import pprint
 from .objects.weather_obj import WeatherObject
 
-
 class Weather(object):
     URL = 'http://query.yahooapis.com/v1/public/yql'
+    
+    def __init__(self, unit='c'):
+        self.unit = unit
 
     def lookup(self, woeid):
-        url = '%s?q=select * from weather.forecast where woeid = %s&format=json' % (self.URL, woeid)
+        url = "%s?q=select * from weather.forecast where woeid = '%s' and u='%s' &format=json" % (self.URL, woeid, self.unit)
         results = self._call(url)
         return results
 
     def lookup_by_location(self, location):
         url = "%s?q=select* from weather.forecast " \
-              "where woeid in (select woeid from geo.places(1) where text='%s')&format=json" % (self.URL, location)
+              "where woeid in (select woeid from geo.places(1) where text='%s') and u='%s' &format=json" % (self.URL, location, self.unit)
         results = self._call(url)
         return results
 

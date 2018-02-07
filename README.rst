@@ -23,7 +23,7 @@ Examples
 
 
     from weather import Weather
-    weather = Weather()
+    weather = Weather(unit='c')
 
     # Lookup WOEID via http://weather.yahoo.com.
 
@@ -45,6 +45,22 @@ Examples
         print(forecast.date())
         print(forecast.high())
         print(forecast.low())
+
+
+CLI Usage
+---------
+
+.. code:: bash
+
+	usage: __main__.py [-h] location
+
+	positional arguments:
+	  location    The location to lookup.
+
+	optional arguments:
+	  -h, --help  show this help message and exit
+	
+
 
 .. _API documentation: https://developer.yahoo.com/weather/
 

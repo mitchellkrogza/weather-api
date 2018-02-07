@@ -6,9 +6,11 @@ def main():
     pa.add_argument('location', help='The location to lookup.')
     args = pa.parse_args()
     weather = Weather()
-    location = weather.lookup_by_location(args.location)
-    condition = location.condition()
-    print(condition.text())
+    loc = weather.lookup_by_location(args.location)
+    condition = loc.condition()
+    print("Weather report for %s" % loc.location()['city'])
+    print("Condition: %s " % condition.text())
+    print("Temperature: %s" % condition.temp())
         
 
 
