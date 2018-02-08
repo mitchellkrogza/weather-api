@@ -30,7 +30,7 @@ class WeatherTests(unittest.TestCase):
         self.assertTrue('Dublin' in data.description())
         self.assertEquals(data.location().country(), "Ireland")
         self.assertEquals(data.location().city(), "Dublin")
-        self.assertEquals(data.location().region(), "DUB")
+        self.assertEquals(data.location().region().strip(), "DUB")
 
     def test_forecast(self):
         w = Weather(Unit.CELSIUS)
