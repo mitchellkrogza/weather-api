@@ -40,7 +40,7 @@ class WeatherObject(object):
         return self._weather_data['item']['lat']
 
     def longitude(self):
-        return self._weather_data['item']['lng']
+        return self._weather_data['item']['long']
 
     def location(self):
         return Location(self._weather_data['location'])
