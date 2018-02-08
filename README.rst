@@ -61,6 +61,13 @@ CLI Usage
         -h, --help      show this help message and exit
         --unit [{c,f}]
 
+Example
+~~~~~~~
+
+.. code::
+        
+        $ weather dublin --u c
+        
 .. _API documentation: https://developer.yahoo.com/weather/
 
 .. |Build Status| image:: https://travis-ci.org/AnthonyBloomer/weather-api.svg?branch=master
