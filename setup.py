@@ -45,7 +45,7 @@ class PublishCommand(Command):
 
 
 setup(name='weather-api',
-      version='0.0.5',
+      version='0.0.6',
       description='A Python wrapper for the Yahoo Weather XML RSS feed.',
       entry_points={
               "console_scripts": ['weather = weather.main:main']
