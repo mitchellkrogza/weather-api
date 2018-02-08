@@ -52,18 +52,18 @@ CLI Usage
 
 .. code::
 
-	usage: weather [-h] [--unit [UNIT]] location
+      usage: __main__.py [-h] [--unit [{c,f}]] location
 
-	positional arguments:
-	  location       The location to lookup.
+      positional arguments:
+        location        The location to lookup.
 
-	optional arguments:
-	  -h, --help     show this help message and exit
-	  --unit [UNIT]
-	
+      optional arguments:
+        -h, --help      show this help message and exit
+        --unit [{c,f}]
+
 .. _API documentation: https://developer.yahoo.com/weather/
 
 .. |Build Status| image:: https://travis-ci.org/AnthonyBloomer/weather-api.svg?branch=master
-   :target: https://travis-ci.org/AnthonyBloomer/weather-api
+    :target: https://travis-ci.org/AnthonyBloomer/weather-api
 .. |codecov| image:: https://codecov.io/gh/AnthonyBloomer/weather-api/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/AnthonyBloomer/weather-api
+    :target: https://codecov.io/gh/AnthonyBloomer/weather-api
