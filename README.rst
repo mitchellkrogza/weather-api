@@ -52,7 +52,7 @@ CLI Usage
 
 .. code::
 
-      usage: __main__.py [-h] [--unit [{c,f}]] location
+      usage: weather [-h] [--unit [{c,f}]] location
 
       positional arguments:
         location        The location to lookup.
