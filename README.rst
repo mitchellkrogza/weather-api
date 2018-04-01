@@ -7,7 +7,7 @@ A Python wrapper for the Yahoo Weather API.
 
 With the API, you can get up-to-date weather information for any location, including 5-day forecast, wind, atmosphere, astronomy conditions, and more. You can lookup weather by woeid, city name or lat/long.
 
-For more information, check out the `API documentation`_.
+For more detailed examples and tutorial, check out `Yahoo Weather Developer Page`_. For more information, check out the `API documentation`_.
 
 Install
 -------
@@ -67,8 +67,8 @@ Example
 .. code::
         
         $ weather dublin --u c
-        
-.. _API documentation: https://developer.yahoo.com/weather/
+.. _Yahoo Weather Developer Page: https://developer.yahoo.com/weather/      
+.. _API documentation: https://developer.yahoo.com/weather/documentation.html
 
 .. |Build Status| image:: https://travis-ci.org/AnthonyBloomer/weather-api.svg?branch=master
     :target: https://travis-ci.org/AnthonyBloomer/weather-api
