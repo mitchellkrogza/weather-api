@@ -19,25 +19,34 @@ Install
 Examples
 --------
 
+Lookup WOEID via http://weather.yahoo.com.
+
 .. code:: python
 
 
     from weather import Weather, Unit
-    weather = Weather(unit=Unit.CELSIUS)
 
-    # Lookup WOEID via http://weather.yahoo.com.
+    weather = Weather(unit=Unit.CELSIUS)
 
     lookup = weather.lookup(560743)
     condition = lookup.condition
+
     print(condition.text)
 
-    # Lookup via location name.
+Lookup via location name.
 
+.. code:: python
+
+    weather = Weather(unit=Unit.CELSIUS)
     location = weather.lookup_by_location('dublin')
     condition = location.condition
     print(condition.text)
     
-    # Get weather forecasts for the upcoming days.
+Get weather forecasts for the upcoming days.
+
+.. code:: python
+
+    weather = Weather(unit=Unit.CELSIUS)
 
     forecasts = location.forecast
     for forecast in forecasts:
@@ -47,14 +56,15 @@ Examples
         print(forecast.low)
 
 
-    # Lookup via latitude and longitude
 
-    w = Weather(Unit.CELSIUS)
+Lookup via latitude and longitude
+
+.. code:: python
+
+    weather = Weather(Unit.CELSIUS)
     lookup = w.lookup_by_latlng(53.3494,-6.2601)
     condition = lookup.condition
     print(condition.text)
-
-
 
 
 CLI Usage
