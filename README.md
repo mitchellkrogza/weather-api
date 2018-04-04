@@ -61,7 +61,7 @@ for forecast in forecasts:
 
 Lookup via latitude and longitude
 
-``` {.sourceCode .python}
+``` python
 weather = Weather(Unit.CELSIUS)
 lookup = w.lookup_by_latlng(53.3494,-6.2601)
 condition = lookup.condition
