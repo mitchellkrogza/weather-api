@@ -81,5 +81,4 @@ class WeatherTests(unittest.TestCase):
     def test_lookup_via_latlng(self):
         w = Weather(Unit.CELSIUS)
         data = w.lookup_by_latlng(53.3494,-6.2601)
-        print data.condition.text
         self.assertTrue('Dublin' in data.description)
