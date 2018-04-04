@@ -20,8 +20,13 @@ class WeatherTests(unittest.TestCase):
         self.assertIsNotNone(data.location)
         self.assertIsNotNone(data.longitude)
         self.assertIsNotNone(data.title)
-        self.assertIsNotNone(data.units)
+        self.assertIsNotNone(data.units.speed)
+        self.assertIsNotNone(data.units.distance)
+        self.assertIsNotNone(data.units.pressure)
         self.assertIsNotNone(data.wind)
+        self.assertIsNotNone(data.wind.chill)
+        self.assertIsNotNone(data.wind.direction)
+        self.assertIsNotNone(data.wind.speed)
 
     def test_search(self):
         w = Weather(Unit.CELSIUS)
@@ -76,4 +81,5 @@ class WeatherTests(unittest.TestCase):
     def test_lookup_via_latlng(self):
         w = Weather(Unit.CELSIUS)
         data = w.lookup_by_latlng(53.3494,-6.2601)
+        print data.condition.text
         self.assertTrue('Dublin' in data.description)

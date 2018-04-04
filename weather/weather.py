@@ -38,7 +38,6 @@ class Weather(object):
             req.raise_for_status()
 
         results = req.json()
-
         if int(results['query']['count']) > 0:
             wo = WeatherObject(results['query']['results']['channel'])
             return wo

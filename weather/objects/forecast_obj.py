@@ -17,3 +17,11 @@ class Forecast(object):
     @property
     def low(self):
         return self._forecast_data['low']
+
+    @property
+    def code(self):
+        return self._forecast_data['code']
+
+    @property
+    def day(self):
+        return self._forecast_data['day']

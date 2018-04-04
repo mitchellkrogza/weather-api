@@ -1,6 +1,8 @@
 from .forecast_obj import Forecast
 from .condition_obj import Condition
 from .location_obj import Location
+from .unit_obj import Unit
+from .wind_obj import Wind
 
 
 class WeatherObject(object):
@@ -40,6 +42,10 @@ class WeatherObject(object):
         return Condition(self._weather_data['item']['condition'])
 
     @property
+    def units(self):
+        return Unit(self._weather_data['units'])
+
+    @property
     def forecast(self):
         forecasts = []
         [forecasts.append(Forecast(res)) for res in self._weather_data['item']['forecast']]
@@ -58,12 +64,8 @@ class WeatherObject(object):
         return Location(self._weather_data['location'])
 
     @property
-    def units(self):
-        return self._weather_data['units']
-
-    @property
     def wind(self):
-        return self._weather_data['wind']
+        return Wind(self._weather_data['wind'])
 
     @property
     def print_obj(self):
