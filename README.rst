@@ -47,7 +47,8 @@ Get weather forecasts for the upcoming days.
 .. code:: python
 
     weather = Weather(unit=Unit.CELSIUS)
-
+    
+    location = weather.lookup_by_location('dublin')
     forecasts = location.forecast
     for forecast in forecasts:
         print(forecast.text)
@@ -62,7 +63,6 @@ Lookup via latitude and longitude
 .. code:: python
 
     weather = Weather(Unit.CELSIUS)
-    location = weather.lookup_by_location('dublin')
     lookup = w.lookup_by_latlng(53.3494,-6.2601)
     condition = lookup.condition
     print(condition.text)
