@@ -10,26 +10,26 @@ def main():
         help="The location to lookup."
     )
     PARSER.add_argument(
-        "--unit",
+        "-unit",
         default="c",
         choices=["c","f"],
         help="Units C or F."
     )
     PARSER.add_argument(
-        "--f",
+        "-f",
         "--forecast",
         action="store_true",
         help="Pass this argument to get a weather forecast."
     )
     PARSER.add_argument(
-        "--s",
+        "-s",
         "--start",
         default="1",
         action="store_true",
         help="Start Day."
     )
     PARSER.add_argument(
-        "--e",
+        "-e",
         "--end",
         default="3",
         action="store_true",
