@@ -6,10 +6,6 @@ import sys
 def main():
     PARSER = argparse.ArgumentParser
     PARSER.add_argument(
-        "location",
-        help="The location to lookup."
-    )
-    PARSER.add_argument(
         "-unit",
         default="c",
         choices=["c","f"],
@@ -34,6 +30,10 @@ def main():
         default="3",
         action="store_true",
         help="End Day."
+    )
+    PARSER.add_argument(
+        "location",
+        help="The location to lookup."
     )
     ARGS = PARSER.parse_args()
     weather = Weather(ARGS.unit)
