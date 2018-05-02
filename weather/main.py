@@ -7,7 +7,7 @@ def main():
     pa = ArgumentParser()
     pa.add_argument('location', help='The location to lookup.')
     pa.add_argument('--unit', default='c', nargs='?', choices=['c', 'f'])
-    pa.add_argument('--f', '--forecast', nargs='?', help='Pass this argument to get a weather forecast')
+    pa.add_argument('--f', '--forecast', nargs='?', help='Pass this argument to get a weather forecast', action="store_true")
     pa.add_argument('--s', '--start', default='1', nargs='?', help='Start Day')
     pa.add_argument('--e', '--end', default='3', nargs='?', help='End Day')
     args = pa.parse_args()
