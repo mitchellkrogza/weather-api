@@ -62,4 +62,8 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         sys.exit(1)
 
-		
+if __name__ == '__hello_world__':
+    try:
+        hello_world()
+    except KeyboardInterrupt:
+        sys.exit(1)		
