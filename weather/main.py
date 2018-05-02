@@ -43,12 +43,6 @@ def main():
     print("Condition: %s " % condition.text)
     print("Temperature: %s" % condition.temp)
 
-def hello_world():
-    return "Hello, World!"
-        a = hello_world # without () at the end we do not call the function we only make a point to hello_world
-        print(a()) # this works and print "Hello, World!"
-        print(a) # This does not work (see the message  to understand)
-
 if ARGS.forecast:
    start = 0 if not ARGS.start else ARGS.start # If the start argument isn't set, set the start as the first element in the forecast array.
    end =  len(location.forecast) if not ARGS.end else ARGS.end # if the end argument isn't set, set the end as the last element in the forecast array.
@@ -61,9 +55,3 @@ if __name__ == '__main__':
         main()
     except KeyboardInterrupt:
         sys.exit(1)
-
-if __name__ == '__hello_world__':
-    try:
-        hello_world()
-    except KeyboardInterrupt:
-        sys.exit(1)		
