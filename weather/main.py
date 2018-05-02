@@ -4,7 +4,7 @@ import sys
 
 
 def main():
-    PARSER = argparse.ArgumentParser
+    PARSER = argparse.ArgumentParser()
     PARSER.add_argument(
         "-unit",
         default="c",
