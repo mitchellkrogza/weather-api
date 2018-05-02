@@ -1,7 +1,6 @@
-from argparse import ArgumentParser
 from .weather import Weather
 import sys
-
+import argparse
 
 def main():
     PARSER = argparse.ArgumentParser()
