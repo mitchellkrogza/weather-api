@@ -24,7 +24,7 @@ def main():
         "-s",
         "--start",
         type=int,
-        default="1",
+        default=1,
         action="store_true",
         help="Start Day."
     )
@@ -32,7 +32,7 @@ def main():
         "-e",
         "--end",
         type=int,
-        default="3",
+        default=3,
         action="store_true",
         help="End Day."
     )
