@@ -23,6 +23,7 @@ def main():
     PARSER.add_argument(
         "-s",
         "--start",
+        type=int,
         default="1",
         action="store_true",
         help="Start Day."
@@ -30,6 +31,7 @@ def main():
     PARSER.add_argument(
         "-e",
         "--end",
+        type=int,
         default="3",
         action="store_true",
         help="End Day."
