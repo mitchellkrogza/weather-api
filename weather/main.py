@@ -43,7 +43,7 @@ def main():
     print("Condition: %s " % condition.text)
     print("Temperature: %s" % condition.temp)
 
-    if ARGS.forecast:()
+    if ARGS.forecast()
         start = 0 if not ARGS.start else ARGS.start # If the start argument isn't set, set the start as the first element in the forecast array.
         end =  len(location.forecast) if not ARGS.end else ARGS.end # if the end argument isn't set, set the end as the last element in the forecast array.
     for forecast in location.forecast[start:end]:
