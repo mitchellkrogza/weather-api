@@ -41,9 +41,9 @@ def main():
     condition = loc.condition
     print("%s, %s" % (loc.location.city, loc.location.country))
     print("%s" % (condition.date))
-    print("-------------------------------------------")
+    print("------------------------------------------------")
     print("{:^28} | {:>8} Deg C".format(condition.text, condition.temp))
-    print("-------------------------------------------")
+    print("------------------------------------------------")
 
     if ARGS.forecast:
         loc = weather.lookup_by_location(ARGS.location)
