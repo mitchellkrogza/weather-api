@@ -42,7 +42,7 @@ def main():
     print("%s, %s" % (loc.location.city, loc.location.country))
     print("%s" % (condition.date))
     print("-------------------------------------------")
-    print("{:^10} | {:^10} Deg C".format(condition.text, condition.temp))
+    print("{:^20} | {:10} Deg C".format(condition.text, condition.temp))
     print("-------------------------------------------")
 
     if ARGS.forecast:
