@@ -44,6 +44,10 @@ def main():
     print("----------------------------------------------")
     print("Now:{:^19} | {} Deg C".format(condition.text, condition.temp))
     print("----------------------------------------------")
+    print("")
+    print("----------------------------------------------")
+    print("--------------- 7 DAY OUTLOOK ----------------")
+    print("----------------------------------------------")
 
     if ARGS.forecast:
         loc = weather.lookup_by_location(ARGS.location)
