@@ -37,7 +37,7 @@ def main():
     )
     ARGS = PARSER.parse_args()
     weather = Weather(ARGS.unit)
-    loc = weather.lookup_by_location(johannesburg)
+    loc = weather.lookup_by_location(ARGS.location)
     condition = loc.condition
     print("%s" % loc.location.city)
     print("%s" % (condition.date))
