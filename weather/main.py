@@ -17,6 +17,7 @@ def main():
     PARSER.add_argument(
         "-f",
         "--forecast",
+        nargs=2,
         default=False,
         action="store_true",
         help="Pass this argument to get a weather forecast."
@@ -43,9 +44,7 @@ def main():
     print("Condition: %s " % condition.text)
     print("Temperature: %s" % condition.temp)
 
-    if ARGS[0].forecast:
-        print ('')
-    else:
+    if ARGS.forecast:
         loc = weather.lookup_by_location(ARGS.location)
         condition = loc.condition
         start = 0 if not ARGS.start else ARGS.start # If the start argument isn't set, set the start as the first element in the forecast array.
