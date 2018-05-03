@@ -40,7 +40,7 @@ def main():
     loc = weather.lookup_by_location(ARGS.location)
     condition = loc.condition
     print("%s, %s" % (loc.location.city, loc.location.country))
-    print("%s" % (condition.date))
+    print("%s %s" % (condition.date, condition.code))
     print("----------------------------------------------")
     print("Now:{:^19} | {} Deg C".format(condition.text, condition.temp))
     print("----------------------------------------------")
