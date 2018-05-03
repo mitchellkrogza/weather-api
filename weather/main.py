@@ -45,7 +45,7 @@ def main():
 
     if ARGS[0].forecast:
         print ('')
-    else
+    else:
         loc = weather.lookup_by_location(ARGS.location)
         condition = loc.condition
         start = 0 if not ARGS.start else ARGS.start # If the start argument isn't set, set the start as the first element in the forecast array.
