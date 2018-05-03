@@ -39,7 +39,7 @@ def main():
     weather = Weather(ARGS.unit)
     loc = weather.lookup_by_location(ARGS.location)
     condition = loc.condition
-    print("%s, %s" % (loc.location.city, loc.location.country))
+    print("%s" % loc.location.city)
     print("%s" % (condition.date))
     print("---------------------------------------")
     print("Condition: %s | Temperature: %s" % (condition.text, condition.temp))
