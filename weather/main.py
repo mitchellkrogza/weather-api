@@ -17,7 +17,6 @@ def main():
     PARSER.add_argument(
         "-f",
         "--forecast",
-        nargs=2,
         default=False,
         action="store_true",
         help="Pass this argument to get a weather forecast."
