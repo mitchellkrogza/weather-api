@@ -48,7 +48,7 @@ def main():
     print("----------------------------------------------")
     print("--------------- 7 DAY OUTLOOK ----------------")
     print("----------------------------------------------")
-    print("%s" % (weather.wind))
+    print("%s" % (loc.wind))
 
     if ARGS.forecast:
         loc = weather.lookup_by_location(ARGS.location)
