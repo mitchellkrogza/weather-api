@@ -51,6 +51,7 @@ def main():
     print("CHILL: %s, DIR: %s, SPEED: %s" % (loc.wind.chill, loc.wind.direction, loc.wind.speed))
     print("%s" % (loc.astronomy))
     print("%s" % (loc.atmosphere))
+    print("%s" % (loc.atmosphere.humidity))
 
     if ARGS.forecast:
         loc = weather.lookup_by_location(ARGS.location)
